@@ -1,0 +1,16 @@
+For Table: store_performance
+
+Profit = [monthly_revenue] - [operating_cost]
+Profit Margin % = ([Profit] / [monthly_revenue]) * 100
+
+For Table: competitor_summary
+
+Total Competitor Stores = SUM(store_count)
+
+DAX Measures (Key Business Metrics)
+
+Total Revenue = SUM(store_performance[monthly_revenue])
+Total Profit = SUM(store_performance[Profit])
+Avg Profit Margin = AVERAGE(store_performance[Profit Margin %])
+Avg Footfall = AVERAGE(store_performance[customer_footfall])
+Competitor Density = AVERAGE(competitor_summary[Total Competitor Stores])
